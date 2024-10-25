@@ -1,0 +1,955 @@
+Package: boost-uninstall
+Version: 1.83.0
+Architecture: x64-linux
+Multi-Arch: same
+Abi: a6cf6aaa11a4c05cbbab247a1080a2896e826939216b3a5356d8a9b724e4437e
+Description: Internal vcpkg port used to uninstall Boost
+Status: install ok installed
+
+Package: boost-vcpkg-helpers
+Version: 1.83.0
+Depends: boost-uninstall
+Architecture: x64-linux
+Multi-Arch: same
+Abi: d1fb626d055b7bc663aa904a5549d86979c4f95ae4fc8a454f6e24a8024c2130
+Description: Internal vcpkg port used to modularize Boost
+Status: install ok installed
+
+Package: boost-config
+Version: 1.83.0
+Depends: boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 0bee1a461c3a548ffab066741a8cebe36ee8b79794037f734dba6efab5295903
+Description: Boost config module
+Status: install ok installed
+
+Package: boost-assert
+Version: 1.83.0
+Depends: boost-config, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: dce268246d3a87610215e49a292c226224a217a90fd3e30e4c428abf11dcdac6
+Description: Boost assert module
+Status: install ok installed
+
+Package: boost-throw-exception
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 41654cc3f8a618c01a44205cc0b1315ea36ba9d4af2184f76c06ef3236d89133
+Description: Boost throw_exception module
+Status: install ok installed
+
+Package: boost-static-assert
+Version: 1.83.0
+Depends: boost-config, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: f99665de8d7cc009be9d5410f547a990d54c3720258f8cfb5f33a7b785d3806e
+Description: Boost static_assert module
+Status: install ok installed
+
+Package: boost-core
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-static-assert, boost-throw-exception, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 0efa6f5f57e8885fc88dd9a157b05bcf24d2c34cedf111c2b62ece9f70e8f23d
+Description: Boost core module
+Status: install ok installed
+
+Package: boost-array
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-core, boost-static-assert, boost-throw-exception, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: bdfcb1ed4699fbd5549f6cb37e79298a06939f1dc79cd7cb385353ce72e9a953
+Description: Boost array module
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2023-05-04
+Architecture: x64-linux
+Multi-Arch: same
+Abi: d416fcfeea630ad2aff4f12a08a845f1b6349ef6025405f079bf2f4e6d927d78
+Status: install ok installed
+
+Package: boost-type-traits
+Version: 1.83.0
+Depends: boost-config, boost-static-assert, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: df0b9ffe9776152b4589d2bd299ce3e95fe39929f50ca410ad98cd9e75ca0823
+Description: Boost type_traits module
+Status: install ok installed
+
+Package: boost-preprocessor
+Version: 1.83.0
+Depends: boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 6a8e74567c1bbb6fe96a7f12f62584b8029bf19cbfb4f01bd99ba7aaa11de941
+Description: Boost preprocessor module
+Status: install ok installed
+
+Package: boost-io
+Version: 1.83.0
+Depends: boost-config, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 46f9b01bbae9a79310b3cefd3640dc1f2613daefc375c3be85ffe82f05d893fc
+Description: Boost io module
+Status: install ok installed
+
+Package: boost-utility
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-core, boost-io, boost-preprocessor, boost-throw-exception, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 93ff3ee3ae1416587d5312caec3ee9c1bf251aebaa71ca7c8bd9a029bff3b320
+Description: Boost utility module
+Status: install ok installed
+
+Package: boost-predef
+Version: 1.83.0
+Depends: boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: fe7d24a775627ae837080bb9079ac70adaae0472478f63d10323b750f178138e
+Description: Boost predef module
+Status: install ok installed
+
+Package: boost-winapi
+Version: 1.83.0
+Depends: boost-config, boost-predef, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: ecd540450615c76c857c4fc6b352a5cb55f0e1d157306f6ce8bd40f94eb05895
+Description: Boost winapi module
+Status: install ok installed
+
+Package: boost-mp11
+Version: 1.83.0
+Depends: boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: a2e001db3f6e08e5bc4f17171323e4f9e8d2d7f21e2a3c43ded02b88a5a0fc50
+Description: Boost mp11 module
+Status: install ok installed
+
+Package: boost-variant2
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-mp11, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: a255073fff8ce5cf15243f090a35ca18f57245ba93f9f20a5137ab5607064df3
+Description: Boost variant2 module
+Status: install ok installed
+
+Package: vcpkg-cmake-get-vars
+Version: 2023-03-02
+Depends: vcpkg-cmake
+Architecture: x64-linux
+Multi-Arch: same
+Abi: ca97b1eea9f70b2d7bef25fb225749f007a8478a3cf087e6fae288c55fd8bc30
+Status: install ok installed
+
+Package: boost-modular-build-helper
+Version: 1.83.0
+Port-Version: 1
+Depends: boost-uninstall, vcpkg-cmake, vcpkg-cmake-get-vars
+Architecture: x64-linux
+Multi-Arch: same
+Abi: ed864511307402721bb0dc721ceb69b6535590bb9d5c1cdd74acc5515547660c
+Description: Internal vcpkg port used to build Boost libraries
+Status: install ok installed
+
+Package: boost-build
+Version: 1.83.0
+Depends: boost-uninstall
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 9ee8ae44c01ab5caeff6ea32aa7f5acc3cfb00464ec206cea1096fa58a9fbcb6
+Description: Boost.Build
+Status: install ok installed
+
+Package: boost-system
+Version: 1.83.0
+Depends: boost-assert, boost-build, boost-config, boost-modular-build-helper, boost-throw-exception, boost-variant2, boost-vcpkg-helpers, boost-winapi, vcpkg-cmake
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 935ea1ac703d1ef1e65f735ddeb0a4108a774c736ccf237eb436ba77570d60f8
+Description: Boost system module
+Status: install ok installed
+
+Package: boost-tuple
+Version: 1.83.0
+Depends: boost-config, boost-core, boost-static-assert, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 7fec5bae814d4e783fcd2f60556362af210097f13a1d32e7caf7d3c35be1233d
+Description: Boost tuple module
+Status: install ok installed
+
+Package: boost-move
+Version: 1.83.0
+Depends: boost-config, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: e718ebf95ba55262d7521c4f8450135788a8dc5c8c77d46633d1fc6e4e20fdf6
+Description: Boost move module
+Status: install ok installed
+
+Package: boost-smart-ptr
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-core, boost-move, boost-static-assert, boost-throw-exception, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 4fb72f832198301d4e97b4e25936899740b653e3b8684b179625fbbe2eb58778
+Description: Boost smart_ptr module
+Status: install ok installed
+
+Package: boost-mpl
+Version: 1.83.0
+Depends: boost-config, boost-core, boost-predef, boost-preprocessor, boost-static-assert, boost-type-traits, boost-utility, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: fa4a04c35a4c5fef66bfe615f3c2be51b9bc94ea3188f00cb1b1f8dec953c539
+Description: Boost mpl module
+Status: install ok installed
+
+Package: boost-integer
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-core, boost-static-assert, boost-throw-exception, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: dff494816ec3ede4c21afec7f07d0943191f2eaaef250123a2fb63f143ba9976
+Description: Boost integer module
+Status: install ok installed
+
+Package: boost-describe
+Version: 1.83.0
+Depends: boost-mp11, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 818ffa0711f1713a6fa977a57199d01c738b71ba5bb8c7202ac387098b9c85a4
+Description: Boost describe module
+Status: install ok installed
+
+Package: boost-container-hash
+Version: 1.83.0
+Depends: boost-config, boost-describe, boost-mp11, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: f5c87c782625826b494656374992217ee6aee02250488b6fa8ffeb561f844650
+Description: Boost container_hash module
+Status: install ok installed
+
+Package: boost-concept-check
+Version: 1.83.0
+Depends: boost-config, boost-preprocessor, boost-static-assert, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 226eeea1518cb1afea6b7cc5e9135c431aa151247059c95de8ac2adcc7d18e65
+Description: Boost concept_check module
+Status: install ok installed
+
+Package: boost-regex
+Version: 1.83.0
+Depends: boost-assert, boost-build, boost-concept-check, boost-config, boost-container-hash, boost-core, boost-integer, boost-modular-build-helper, boost-mpl, boost-predef, boost-smart-ptr, boost-static-assert, boost-throw-exception, boost-type-traits, boost-vcpkg-helpers, vcpkg-cmake
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 7ac17866c3ec2899ce06ff447b3c06f412453e8c278b0cc197f251d4bcc6d9cb
+Description: Boost regex module
+Status: install ok installed
+
+Package: boost-detail
+Version: 1.83.0
+Depends: boost-config, boost-core, boost-preprocessor, boost-static-assert, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 5d77d637096f177066db7b4d66a627cc355f1d3f98d7d7818bfd0e63e3ed7508
+Description: Boost detail module
+Status: install ok installed
+
+Package: boost-optional
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-core, boost-detail, boost-move, boost-predef, boost-static-assert, boost-throw-exception, boost-type-traits, boost-utility, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 85f73caec99d57062420dc3ab2ff562828fa746920a8c881c8ebb7de2e1c9d1f
+Description: Boost optional module
+Status: install ok installed
+
+Package: boost-typeof
+Version: 1.83.0
+Depends: boost-config, boost-preprocessor, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 228b8edd25d848d1e112ee1eb073d0a202275221d4223ff962c61d35d617d565
+Description: Boost typeof module
+Status: install ok installed
+
+Package: boost-function-types
+Version: 1.83.0
+Depends: boost-config, boost-core, boost-detail, boost-mpl, boost-preprocessor, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 210cd83ba62d6692fd035ee62cb58f01d5f78dd17759a8257649d9dae5de6c14
+Description: Boost function_types module
+Status: install ok installed
+
+Package: boost-bind
+Version: 1.83.0
+Depends: boost-config, boost-core, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 233be8fd152aa2e4c355b90819defd2a718651261d7663febe0f5af0f7fc25eb
+Description: Boost bind module
+Status: install ok installed
+
+Package: boost-function
+Version: 1.83.0
+Depends: boost-assert, boost-bind, boost-config, boost-core, boost-preprocessor, boost-throw-exception, boost-type-traits, boost-typeof, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 55b3eec3c40a51b94203755901ec006b7601b55bc0c4ed0bd568aa4c09659b30
+Description: Boost function module
+Status: install ok installed
+
+Package: boost-functional
+Version: 1.83.0
+Depends: boost-config, boost-core, boost-function, boost-function-types, boost-mpl, boost-preprocessor, boost-type-traits, boost-typeof, boost-utility, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 999c6107acd019db07749e2efbe102e33c4c508307532cf7a066126c879355f0
+Description: Boost functional module
+Status: install ok installed
+
+Package: boost-fusion
+Version: 1.83.0
+Depends: boost-config, boost-container-hash, boost-core, boost-function-types, boost-functional, boost-mpl, boost-preprocessor, boost-static-assert, boost-tuple, boost-type-traits, boost-typeof, boost-utility, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: ec64c3fb8e2ca7292403c652a03644b29d8a7cf55626d331dee8250cfcbb9859
+Description: Boost fusion module
+Status: install ok installed
+
+Package: boost-conversion
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-core, boost-smart-ptr, boost-throw-exception, boost-type-traits, boost-typeof, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: daf2d77ac7d2f2c8eb761c4c7cc883fe88c089a51f452c82403e8b9fded094cf
+Description: Boost conversion module
+Status: install ok installed
+
+Package: boost-iterator
+Version: 1.83.0
+Depends: boost-assert, boost-concept-check, boost-config, boost-conversion, boost-core, boost-detail, boost-function-types, boost-fusion, boost-mpl, boost-optional, boost-smart-ptr, boost-static-assert, boost-type-traits, boost-utility, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 7dfa462415d95d2d727b86b0d819b745a20800f1f2896e2cc7eec2157e60de95
+Description: Boost iterator module
+Status: install ok installed
+
+Package: boost-range
+Version: 1.83.0
+Depends: boost-array, boost-assert, boost-concept-check, boost-config, boost-container-hash, boost-conversion, boost-core, boost-detail, boost-iterator, boost-mpl, boost-optional, boost-preprocessor, boost-regex, boost-static-assert, boost-tuple, boost-type-traits, boost-utility, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: bcf0a528c9b753b68b287fb5b9d992ac5ad4067bacd6cf64fff20a0845877b41
+Description: Boost range module
+Status: install ok installed
+
+Package: boost-dynamic-bitset
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-container-hash, boost-core, boost-integer, boost-move, boost-static-assert, boost-throw-exception, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: c42cab5f898d00bb3839e25dae2439f40e16f99e54721e3456c06ed8e6697d0c
+Description: Boost dynamic_bitset module
+Status: install ok installed
+
+Package: boost-random
+Version: 1.83.0
+Depends: boost-array, boost-assert, boost-build, boost-config, boost-core, boost-dynamic-bitset, boost-integer, boost-io, boost-modular-build-helper, boost-range, boost-static-assert, boost-system, boost-throw-exception, boost-type-traits, boost-utility, boost-vcpkg-helpers, vcpkg-cmake
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 2cc22504f5730162d68ec1928cd3e281648aab05c9ecc62152a4d7b78d824634
+Description: Boost random module
+Status: install ok installed
+
+Package: boost-numeric-conversion
+Version: 1.83.0
+Depends: boost-config, boost-conversion, boost-core, boost-mpl, boost-preprocessor, boost-throw-exception, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: fd1daed619ab000d56f33fbcd00b5df38be61d0f215fcd8e3878ba7bd0e76382
+Description: Boost numeric_conversion module
+Status: install ok installed
+
+Package: boost-intrusive
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-container-hash, boost-move, boost-static-assert, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 19e013de04f7fcf640af4e8b360abb24b1ba0517fd1d607f5344c287e66a9033
+Description: Boost intrusive module
+Status: install ok installed
+
+Package: boost-container
+Version: 1.83.0
+Depends: boost-assert, boost-build, boost-config, boost-intrusive, boost-modular-build-helper, boost-move, boost-static-assert, boost-vcpkg-helpers, vcpkg-cmake
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 25b880c20cc979104c0efd4d96adf834f0bca4b06382aaebac4b54e35f5ebe5a
+Description: Boost container module
+Status: install ok installed
+
+Package: boost-lexical-cast
+Version: 1.83.0
+Depends: boost-array, boost-assert, boost-config, boost-container, boost-core, boost-integer, boost-numeric-conversion, boost-range, boost-static-assert, boost-throw-exception, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 79dce890353a425014ce81bcebe553d75720dbd3218b3c1154309d2fbc57ad34
+Description: Boost lexical_cast module
+Status: install ok installed
+
+Package: boost-math
+Version: 1.83.0
+Depends: boost-assert, boost-build, boost-concept-check, boost-config, boost-core, boost-integer, boost-lexical-cast, boost-modular-build-helper, boost-predef, boost-random, boost-static-assert, boost-throw-exception, boost-vcpkg-helpers, vcpkg-cmake
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 4c4948253ba92c6dab65ffc7779c5e9c2b046197b18435eb0b1dc2867d051d75
+Description: Boost math module
+Status: install ok installed
+
+Package: boost-lambda
+Version: 1.83.0
+Depends: boost-bind, boost-config, boost-core, boost-detail, boost-iterator, boost-mpl, boost-preprocessor, boost-tuple, boost-type-traits, boost-utility, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 563146214b33fae7b64a37749128f5d156a5c7d6512c407c531afd9a7a2ffa38
+Description: Boost lambda module
+Status: install ok installed
+
+Package: boost-units
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-core, boost-integer, boost-io, boost-lambda, boost-math, boost-mpl, boost-preprocessor, boost-static-assert, boost-type-traits, boost-typeof, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 4f4575f1b1c6da2dd9974adc54a67ee5ffb764ce05cf3485c64587acd5dea84d
+Description: Boost units module
+Status: install ok installed
+
+Package: boost-type-index
+Version: 1.83.0
+Depends: boost-config, boost-container-hash, boost-core, boost-preprocessor, boost-static-assert, boost-throw-exception, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 90fa3e0a294873e145d5c390763145c588bfbe5c612ca7cd2b9f6df71f9d4d25
+Description: Boost type_index module
+Status: install ok installed
+
+Package: boost-variant
+Version: 1.83.0
+Depends: boost-assert, boost-bind, boost-config, boost-container-hash, boost-core, boost-detail, boost-integer, boost-move, boost-mpl, boost-preprocessor, boost-static-assert, boost-throw-exception, boost-type-index, boost-type-traits, boost-utility, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: cc7b8105c882442edcf03984637359f193a87d12d54723e49bed33a893c08d76
+Description: Boost variant module
+Status: install ok installed
+
+Package: boost-unordered
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-container-hash, boost-core, boost-move, boost-mp11, boost-predef, boost-preprocessor, boost-static-assert, boost-throw-exception, boost-tuple, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: e652f0cea2ea7e0eaad833dd3313c5d619ca44b8183c472b66598b842fdf6f96
+Description: Boost unordered module
+Status: install ok installed
+
+Package: boost-exception
+Version: 1.83.0
+Depends: boost-assert, boost-build, boost-config, boost-core, boost-modular-build-helper, boost-smart-ptr, boost-throw-exception, boost-tuple, boost-type-traits, boost-vcpkg-helpers, vcpkg-cmake
+Architecture: x64-linux
+Multi-Arch: same
+Abi: e91128942f9083fe5eb818328057ffc2a3ee4f16335a1637f087f1bb86c8fde3
+Description: Boost exception module
+Status: install ok installed
+
+Package: boost-tokenizer
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-core, boost-iterator, boost-throw-exception, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 2aa9211a1e266084847812d048a6b36d5b0dc2349e7f8223de7de46e48f3edd0
+Description: Boost tokenizer module
+Status: install ok installed
+
+Package: boost-algorithm
+Version: 1.83.0
+Depends: boost-array, boost-assert, boost-bind, boost-concept-check, boost-config, boost-core, boost-exception, boost-function, boost-iterator, boost-mpl, boost-range, boost-regex, boost-static-assert, boost-throw-exception, boost-tuple, boost-type-traits, boost-unordered, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: e3cb17b3fe1fb56467c6a60531ab088a74c41eb1a9ef28560b2f73b3bbf28e37
+Description: Boost algorithm module
+Status: install ok installed
+
+Package: boost-date-time
+Version: 1.83.0
+Depends: boost-algorithm, boost-assert, boost-build, boost-config, boost-core, boost-io, boost-lexical-cast, boost-modular-build-helper, boost-numeric-conversion, boost-range, boost-smart-ptr, boost-static-assert, boost-throw-exception, boost-tokenizer, boost-type-traits, boost-utility, boost-vcpkg-helpers, boost-winapi, vcpkg-cmake
+Architecture: x64-linux
+Multi-Arch: same
+Abi: f0ff0bc64496931b364ccd9d78da1c67a02d9605ad52a8241d6a5f27ed4de5d0
+Description: Boost date_time module
+Status: install ok installed
+
+Package: boost-rational
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-core, boost-integer, boost-static-assert, boost-throw-exception, boost-type-traits, boost-utility, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 83cd69906bc63011757e07a6bd1e50eaf03cdc2ae445c886eacc6c65f0ea0ec4
+Description: Boost rational module
+Status: install ok installed
+
+Package: boost-ratio
+Version: 1.83.0
+Depends: boost-config, boost-core, boost-integer, boost-mpl, boost-rational, boost-static-assert, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 73bb1ce2e83e32507c2c8d58b564d5b473c20e196c0b27663749a8826c6b282e
+Description: Boost ratio module
+Status: install ok installed
+
+Package: boost-chrono
+Version: 1.83.0
+Depends: boost-assert, boost-build, boost-config, boost-core, boost-integer, boost-modular-build-helper, boost-move, boost-mpl, boost-predef, boost-ratio, boost-static-assert, boost-system, boost-throw-exception, boost-type-traits, boost-typeof, boost-utility, boost-vcpkg-helpers, boost-winapi, vcpkg-cmake
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 5c839316dc0e3b31916a675c32af5583081b2ccc316a992c2ecd02d3a952c13a
+Description: Boost chrono module
+Status: install ok installed
+
+Package: boost-align
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-core, boost-static-assert, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 162ac7c65685e87df990d11fa07c2a4193c58e291e49dcf87daef8448f1192ed
+Description: Boost align module
+Status: install ok installed
+
+Package: boost-atomic
+Version: 1.83.0
+Depends: boost-align, boost-assert, boost-build, boost-config, boost-modular-build-helper, boost-predef, boost-preprocessor, boost-static-assert, boost-type-traits, boost-vcpkg-helpers, boost-winapi, vcpkg-cmake
+Architecture: x64-linux
+Multi-Arch: same
+Abi: f407bc8b09f554e91cfb003479e074e5d75591d6836c4637ca5a29ee7dae55d1
+Description: Boost atomic module
+Status: install ok installed
+
+Package: boost-thread
+Version: 1.83.0
+Depends: boost-algorithm, boost-assert, boost-atomic, boost-bind, boost-build, boost-chrono, boost-concept-check, boost-config, boost-container, boost-container-hash, boost-core, boost-date-time, boost-exception, boost-function, boost-intrusive, boost-io, boost-iterator, boost-lexical-cast, boost-modular-build-helper, boost-move, boost-optional, boost-predef, boost-preprocessor, boost-smart-ptr, boost-static-assert, boost-system, boost-throw-exception, boost-tuple, boost-type-traits, boost-utility, boost-vcpkg-helpers, boost-winapi, vcpkg-cmake
+Architecture: x64-linux
+Multi-Arch: same
+Abi: d506b289ddda775010151485053c8602af7214aae8318f3a250370a17cc7adf3
+Description: Boost thread module
+Status: install ok installed
+
+Package: boost-proto
+Version: 1.83.0
+Depends: boost-config, boost-core, boost-fusion, boost-mpl, boost-preprocessor, boost-range, boost-static-assert, boost-type-traits, boost-typeof, boost-utility, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 809a5f1eab48c77dc0cbda38c7a6da67800b0e304dbee34f66653d70c49aa6b6
+Description: Boost proto module
+Status: install ok installed
+
+Package: boost-pool
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-integer, boost-throw-exception, boost-type-traits, boost-vcpkg-helpers, boost-winapi
+Architecture: x64-linux
+Multi-Arch: same
+Abi: a5a3dcce77c943fb67c411eadd4469119bd71f6566d908615ef8007b038f2eb2
+Description: Boost pool module
+Status: install ok installed
+
+Package: boost-phoenix
+Version: 1.83.0
+Depends: boost-assert, boost-bind, boost-config, boost-core, boost-function, boost-fusion, boost-mpl, boost-predef, boost-preprocessor, boost-proto, boost-range, boost-smart-ptr, boost-type-traits, boost-utility, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 0fc1e973cdf23249a57d706eac7b54f4e2299502ab033df0e540a31a44c0903d
+Description: Boost phoenix module
+Status: install ok installed
+
+Package: boost-endian
+Version: 1.83.0
+Depends: boost-config, boost-core, boost-static-assert, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: da22deb83fc1a5115bcb1cd55b6c43f5642656427f616399700945a7927ee19c
+Description: Boost endian module
+Status: install ok installed
+
+Package: boost-spirit
+Version: 1.83.0
+Depends: boost-array, boost-assert, boost-config, boost-core, boost-endian, boost-function, boost-function-types, boost-fusion, boost-integer, boost-io, boost-iterator, boost-move, boost-mpl, boost-optional, boost-phoenix, boost-pool, boost-preprocessor, boost-proto, boost-range, boost-regex, boost-smart-ptr, boost-static-assert, boost-thread, boost-throw-exception, boost-type-traits, boost-typeof, boost-unordered, boost-utility, boost-variant, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: b8121733276756bb8383daa6f4c6b7bfab6b575fc51a8304e31388297f9d54e3
+Description: Boost spirit module
+Status: install ok installed
+
+Package: boost-serialization
+Version: 1.83.0
+Depends: boost-array, boost-assert, boost-build, boost-config, boost-core, boost-detail, boost-function, boost-integer, boost-io, boost-iterator, boost-modular-build-helper, boost-move, boost-mpl, boost-optional, boost-predef, boost-preprocessor, boost-smart-ptr, boost-spirit, boost-static-assert, boost-type-traits, boost-unordered, boost-utility, boost-variant, boost-vcpkg-helpers, vcpkg-cmake
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 22c584aba98216f383eab334128b3a8d0563c177bfcd2d2b757aa3357bb6579d
+Description: Boost serialization module
+Status: install ok installed
+
+Package: boost-logic
+Version: 1.83.0
+Depends: boost-config, boost-core, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 0d15e6d11092d99c0467c62e9c1ba5a94ddd4e0caadb84875e78ca1e216a6982
+Description: Boost logic module
+Status: install ok installed
+
+Package: boost-interval
+Version: 1.83.0
+Depends: boost-config, boost-detail, boost-logic, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 7bbe1a74fb9528fc05180b5c820b55ae5d095495677675d28b3ac7803392d1b5
+Description: Boost interval module
+Status: install ok installed
+
+Package: boost-ublas
+Version: 1.83.0
+Depends: boost-concept-check, boost-config, boost-core, boost-interval, boost-iterator, boost-mpl, boost-range, boost-serialization, boost-smart-ptr, boost-static-assert, boost-type-traits, boost-typeof, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 84711fd993d42e93636612d5807a14aa632cd980ed9b7e80ed7c2f6018f4e4c1
+Description: Boost ublas module
+Status: install ok installed
+
+Package: boost-multi-array
+Version: 1.83.0
+Depends: boost-array, boost-assert, boost-concept-check, boost-config, boost-core, boost-functional, boost-iterator, boost-mpl, boost-static-assert, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: a162d313bb6e7c4407e7c3e7f1b771bf5ea4edeb4c35fef6f4f70146ef50b3e2
+Description: Boost multi_array module
+Status: install ok installed
+
+Package: boost-tti
+Version: 1.83.0
+Depends: boost-config, boost-function-types, boost-mpl, boost-preprocessor, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: c22ff702d6a94a4ba1c655506263d92a3eb28e4cf45e9fc706a89605e73b6a9d
+Description: Boost tti module
+Status: install ok installed
+
+Package: boost-uuid
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-container-hash, boost-core, boost-io, boost-move, boost-numeric-conversion, boost-predef, boost-random, boost-static-assert, boost-throw-exception, boost-tti, boost-type-traits, boost-vcpkg-helpers, boost-winapi
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 1daab218d2aa31b3326dc79824138a1fcafc861ae4b31671ded73d2599503351
+Description: Boost uuid module
+Status: install ok installed
+
+Package: boost-multi-index
+Version: 1.83.0
+Depends: boost-assert, boost-bind, boost-config, boost-container-hash, boost-core, boost-integer, boost-iterator, boost-move, boost-mpl, boost-preprocessor, boost-smart-ptr, boost-static-assert, boost-throw-exception, boost-tuple, boost-type-traits, boost-utility, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: b162f561e992671cd8ed807aaf979d525309227bf88041e3546fad7a95e9991d
+Description: Boost multi_index module
+Status: install ok installed
+
+Package: boost-format
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-core, boost-optional, boost-smart-ptr, boost-throw-exception, boost-utility, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: d3cd22f850378468b11ff0c16835a9d8d108ac041ca3a5c1e28918437e15f1c0
+Description: Boost format module
+Status: install ok installed
+
+Package: boost-any
+Version: 1.83.0
+Depends: boost-assert, boost-config, boost-core, boost-static-assert, boost-throw-exception, boost-type-index, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: fc328a594d20d31c46f74b32b809e8d15b2e3218db6481466f756593837bb1cd
+Description: Boost any module
+Status: install ok installed
+
+Package: boost-property-tree
+Version: 1.83.0
+Depends: boost-any, boost-assert, boost-bind, boost-config, boost-core, boost-format, boost-iterator, boost-mpl, boost-multi-index, boost-optional, boost-range, boost-serialization, boost-static-assert, boost-throw-exception, boost-type-traits, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 5bc5408c30e24565601277d1d9526e9de821af2a5adead26a2b9fae8bf21bfd6
+Description: Boost property_tree module
+Status: install ok installed
+
+Package: boost-filesystem
+Version: 1.83.0
+Depends: boost-assert, boost-atomic, boost-build, boost-config, boost-container-hash, boost-core, boost-detail, boost-io, boost-iterator, boost-modular-build-helper, boost-predef, boost-smart-ptr, boost-system, boost-throw-exception, boost-type-traits, boost-vcpkg-helpers, boost-winapi, vcpkg-cmake
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 52285e49b3f29da4e4634b10dd1a5800cdbc7fad7bd71c166206eb373e9aeb14
+Description: Boost filesystem module
+Status: install ok installed
+
+Package: boost-compute
+Version: 1.83.0
+Depends: boost-algorithm, boost-array, boost-assert, boost-chrono, boost-config, boost-core, boost-filesystem, boost-function, boost-function-types, boost-fusion, boost-iterator, boost-lexical-cast, boost-mpl, boost-optional, boost-preprocessor, boost-property-tree, boost-proto, boost-range, boost-smart-ptr, boost-static-assert, boost-thread, boost-throw-exception, boost-tuple, boost-type-traits, boost-typeof, boost-utility, boost-uuid, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 154e43da8799ef5ff3551f492823fdeea4366a48e789f292277feaf862cb7c80
+Description: Boost compute module
+Status: install ok installed
+
+Package: boost-odeint
+Version: 1.83.0
+Depends: boost-array, boost-assert, boost-bind, boost-compute, boost-config, boost-core, boost-function, boost-fusion, boost-iterator, boost-math, boost-mpl, boost-multi-array, boost-preprocessor, boost-range, boost-static-assert, boost-throw-exception, boost-type-traits, boost-ublas, boost-units, boost-utility, boost-vcpkg-helpers
+Architecture: x64-linux
+Multi-Arch: same
+Abi: ba7bc5f7eb8f5487fed7596d875e04d75bdba1ebf53332123049757a6fd5d288
+Description: Boost odeint module
+Status: install ok installed
+
+Package: vcpkg-cmake-config
+Version: 2022-02-06
+Port-Version: 1
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 606d50b43062ab4ef2d535eb063bdfaa9fd17d417e0e83a6db5dcf7ba5861ab3
+Status: install ok installed
+
+Package: catch2
+Version: 3.4.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 2d6af3e8bb62843612f4fbf837fce54ee2a3e607bff897be5a6ca660c088a7a8
+Description: A modern, header-only test framework for unit testing.
+Status: install ok installed
+
+Package: eigen3
+Version: 3.4.0
+Port-Version: 2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 237844e60f63f3814fd1104561377e91dbbea5c6dffa60270f89b17219ec63b5
+Description: C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
+Status: install ok installed
+
+Package: fftw3
+Version: 3.3.10
+Port-Version: 8
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 53b96f879ddafdf047576feb6d41bded264ef419680031f6010c1d68e73d6836
+Description: FFTW is a C subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions, of arbitrary input size, and of both real and complex data (as well as of even/odd data, i.e. the discrete cosine/sine transforms or DCT/DST).
+Status: install ok installed
+
+Package: fmt
+Version: 10.1.1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 8b3b14e5163143b4f6292bb0935a79ac125ab397f948ec937772293aea7ddc7d
+Description: Formatting library for C++. It can be used as a safe alternative to printf or as a fast alternative to IOStreams.
+Status: install ok installed
+
+Package: openssl
+Version: 3.1.4
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config, vcpkg-cmake-get-vars
+Architecture: x64-linux
+Multi-Arch: same
+Abi: b20000df5d16d32c0792ee4f9da4ac4a2ea70f27fcabb52957840cd9754009ce
+Description: OpenSSL is an open source project that provides a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.
+Status: install ok installed
+
+Package: zlib
+Version: 1.3
+Depends: vcpkg-cmake
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 65dd104a85bf517d0fbf53e1ec35b55d592054c30fabd7cc690a03fd0f9dbc4b
+Description: A compression library
+Status: install ok installed
+
+Package: curl
+Version: 8.4.0
+Depends: vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 542cb89bdacfaed62aa9ed9e77ea3dfed7950501568a80b2cc6acb9294120f82
+Description: A library for transferring data with URLs
+Default-Features: non-http, ssl
+Status: install ok installed
+
+Package: curl
+Feature: non-http
+Architecture: x64-linux
+Multi-Arch: same
+Description: Enables protocols beyond HTTP/HTTPS/HTTP2
+Status: install ok installed
+
+Package: curl
+Feature: openssl
+Depends: openssl
+Architecture: x64-linux
+Multi-Arch: same
+Description: SSL support (OpenSSL)
+Status: install ok installed
+
+Package: curl
+Feature: ssl
+Architecture: x64-linux
+Multi-Arch: same
+Description: Default SSL backend
+Status: install ok installed
+
+Package: vcpkg-tool-meson
+Version: 0.63
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 4f6713b20082fdd7b6c2622719094ec8e3a6be00fd47b923db7b4fe13ce7bfcf
+Description: Meson build system
+Status: install ok installed
+
+Package: pkgconf
+Version: 1.8.0
+Port-Version: 5
+Depends: vcpkg-tool-meson
+Architecture: x64-linux
+Multi-Arch: same
+Abi: e93c01701ac32c48f810d537894673d9c0ec7eaa60961fee7b6a2dda59968ec8
+Description: pkgconf is a program which helps to configure compiler and linker flags for development libraries. It is similar to pkg-config from freedesktop.org.
+Status: install ok installed
+
+Package: vcpkg-pkgconfig-get-modules
+Version: 2023-09-06
+Depends: pkgconf
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 0fde56853197f304f3eb4bf543b5fc6da887fa0e6ebd3e75be270f5840fb33d4
+Status: install ok installed
+
+Package: szip
+Version: 2.1.1
+Port-Version: 12
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 85a1c24178c8b77998f26c1e25df481516ca0c15870f28eb51b9db98eadc1818
+Description: Szip compression software, providing lossless compression of scientific data
+Status: install ok installed
+
+Package: hdf5
+Version: 1.14.2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: dc83c20d5efba1d7466eeaf98ba07c5c451b790af31508854eb88b116d7231f6
+Description: HDF5 is a data model, library, and file format for storing and managing data
+Default-Features: szip, zlib
+Status: install ok installed
+
+Package: hdf5
+Feature: szip
+Depends: szip
+Architecture: x64-linux
+Multi-Arch: same
+Description: Build with szip
+Status: install ok installed
+
+Package: hdf5
+Feature: zlib
+Depends: zlib
+Architecture: x64-linux
+Multi-Arch: same
+Description: Build with zlib
+Status: install ok installed
+
+Package: netcdf-c
+Version: 4.8.1
+Port-Version: 4
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: 8ff1de94972543f2c1e9216ea4a5bc1dc46beec207c2c24381a19dc9cf2b4110
+Description: A set of self-describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data.
+Default-Features: dap, hdf5, nczarr, netcdf-4
+Status: install ok installed
+
+Package: netcdf-c
+Feature: dap
+Depends: curl
+Architecture: x64-linux
+Multi-Arch: same
+Description: Build with DAP remote access client support
+Status: install ok installed
+
+Package: netcdf-c
+Feature: hdf5
+Depends: hdf5, vcpkg-pkgconfig-get-modules
+Architecture: x64-linux
+Multi-Arch: same
+Description: Build with HDF5 support
+Status: install ok installed
+
+Package: netcdf-c
+Feature: nczarr
+Depends: curl
+Architecture: x64-linux
+Multi-Arch: same
+Description: Build with NCZarr cloud storage access support
+Status: install ok installed
+
+Package: netcdf-c
+Feature: netcdf-4
+Architecture: x64-linux
+Multi-Arch: same
+Description: Build with netCDF-4 support
+Status: install ok installed
+
+Package: netcdf-cxx4
+Version: 4.3.1
+Port-Version: 5
+Depends: hdf5, netcdf-c, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: e360db49cd85770960ab53eca3a55da0b17ef9feb216178734a31c6a7490b761
+Description: a set of machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data.
+Status: install ok installed
+
+Package: yaml-cpp
+Version: 0.8.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-linux
+Multi-Arch: same
+Abi: db79111bdbde19f29bbd486a5ab5079fb87ddae9b3ad77ecb49c260f37a0d4c6
+Description: yaml-cpp is a YAML parser and emitter in C++ matching the YAML 1.2 spec.
+Status: install ok installed
+

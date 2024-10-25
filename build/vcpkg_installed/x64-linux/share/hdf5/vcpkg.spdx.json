@@ -1,0 +1,220 @@
+{
+  "$schema": "https://raw.githubusercontent.com/spdx/spdx-spec/v2.2.1/schemas/spdx-schema.json",
+  "spdxVersion": "SPDX-2.2",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "documentNamespace": "https://spdx.org/spdxdocs/hdf5-x64-linux-1.14.2-4b195640-6a57-4bb6-862a-d0e28e93e45d",
+  "name": "hdf5:x64-linux@1.14.2 dc83c20d5efba1d7466eeaf98ba07c5c451b790af31508854eb88b116d7231f6",
+  "creationInfo": {
+    "creators": [
+      "Tool: vcpkg-4c1df40a3c5c5e18de299a99e9accb03c2a82e1e"
+    ],
+    "created": "2024-10-25T10:12:00Z"
+  },
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "GENERATES",
+      "relatedSpdxElement": "SPDXRef-binary"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-0"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-1"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-2"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-3"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-4"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-5"
+    },
+    {
+      "spdxElementId": "SPDXRef-port",
+      "relationshipType": "CONTAINS",
+      "relatedSpdxElement": "SPDXRef-file-6"
+    },
+    {
+      "spdxElementId": "SPDXRef-binary",
+      "relationshipType": "GENERATED_FROM",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-0",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-1",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-2",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-3",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-4",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-5",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    },
+    {
+      "spdxElementId": "SPDXRef-file-6",
+      "relationshipType": "CONTAINED_BY",
+      "relatedSpdxElement": "SPDXRef-port"
+    }
+  ],
+  "packages": [
+    {
+      "name": "hdf5",
+      "SPDXID": "SPDXRef-port",
+      "versionInfo": "1.14.2",
+      "downloadLocation": "git+https://github.com/microsoft/vcpkg@24055818f16022ee4fe1feca4008df0a20d2cdb1",
+      "homepage": "https://www.hdfgroup.org/downloads/hdf5/",
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "description": "HDF5 is a data model, library, and file format for storing and managing data",
+      "comment": "This is the port (recipe) consumed by vcpkg."
+    },
+    {
+      "name": "hdf5:x64-linux",
+      "SPDXID": "SPDXRef-binary",
+      "versionInfo": "dc83c20d5efba1d7466eeaf98ba07c5c451b790af31508854eb88b116d7231f6",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "BSD-3-Clause",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "comment": "This is a binary package built by vcpkg."
+    },
+    {
+      "SPDXID": "SPDXRef-resource-1",
+      "name": "HDFGroup/hdf5",
+      "downloadLocation": "git+https://github.com/HDFGroup/hdf5@${hdf5_ref}",
+      "licenseConcluded": "NOASSERTION",
+      "licenseDeclared": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA512",
+          "checksumValue": "9b44993bcdc1493a22da61c77a1bd962c0088ff8e7fb75c00568617386cfc296a73bbdae79c05847109bf1984e95660bbe459f8a96950f6cf71002800eed23f8"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "fileName": ".//root/.cache/vcpkg/registries/git-trees/24055818f16022ee4fe1feca4008df0a20d2cdb1/hdf5_config.patch",
+      "SPDXID": "SPDXRef-file-0",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "60b3e2408f2dcd7fbb6f48cc839c2229dbed4dab82f6570ebdd4a26e65e5ad28"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": ".//root/.cache/vcpkg/registries/git-trees/24055818f16022ee4fe1feca4008df0a20d2cdb1/portfile.cmake",
+      "SPDXID": "SPDXRef-file-1",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e860d1f37e848b3166687d1704c79f58145f4e6961b2ea376b6c8f65d6d8f2f3"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": ".//root/.cache/vcpkg/registries/git-trees/24055818f16022ee4fe1feca4008df0a20d2cdb1/szip.patch",
+      "SPDXID": "SPDXRef-file-2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "62b554d6e445b45de777232f07156e3874f409c3cdf970ad52bec057883380e3"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": ".//root/.cache/vcpkg/registries/git-trees/24055818f16022ee4fe1feca4008df0a20d2cdb1/vcpkg-cmake-wrapper.cmake",
+      "SPDXID": "SPDXRef-file-3",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "9091f107c2b16574a27e1e1042544e14b88d72558d2322a00a6138cb1c5904c2"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": ".//root/.cache/vcpkg/registries/git-trees/24055818f16022ee4fe1feca4008df0a20d2cdb1/vcpkg.json",
+      "SPDXID": "SPDXRef-file-4",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "48206d4f3bcce776e709e744b70c745191dc3d47352cea76f813850a0976a987"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": ".//root/.cache/vcpkg/registries/git-trees/24055818f16022ee4fe1feca4008df0a20d2cdb1/pkgconfig-requires.patch",
+      "SPDXID": "SPDXRef-file-5",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4997a8d0e1447d6d2ca759ec7d3572a4729441bd3f5f8fd25d77ba93f253abec"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    },
+    {
+      "fileName": ".//root/.cache/vcpkg/registries/git-trees/24055818f16022ee4fe1feca4008df0a20d2cdb1/vcpkg-port-config.cmake",
+      "SPDXID": "SPDXRef-file-6",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "732de06a44578c5fdd8dca8483d824935fc84f6291718ff1d5b5d1ed12ad5fc3"
+        }
+      ],
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION"
+    }
+  ]
+}

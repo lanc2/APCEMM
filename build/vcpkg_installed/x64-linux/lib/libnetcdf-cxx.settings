@@ -1,0 +1,23 @@
+# NetCDF C Configuration Summary
+==============================
+
+# General
+-------
+NetCDF Version:		4.3.1
+Configured On:		Fri Oct 25 10:12:46 UTC 2024
+Host System:		x86_64-Linux-5.15.153.1-microsoft-standard-WSL2
+Build Directory: 	/workspaces/APCEMM-main/Code.v05-00/submodules/vcpkg/buildtrees/netcdf-cxx4/x64-linux-rel
+Install Prefix:         
+
+# Compiling Options
+-----------------
+C Compiler:		/usr/bin/cc
+CFLAGS:			-fPIC -g -Wall -Wno-unused-variable -Wno-unused-parameter -O3 -DNDEBUG
+CPPFLAGS:		-fPIC -g -Wall -Wno-unused-variable -Wno-unused-parameter -O3 -DNDEBUG
+LDFLAGS:		 
+AM_CFLAGS:		
+AM_CPPFLAGS:		
+AM_LDFLAGS:		
+Shared Library:		no
+Static Library:		yes
+Extra libraries:	
