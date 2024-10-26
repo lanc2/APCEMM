@@ -12,3 +12,6 @@ module load cmake/latest
 # mkdir build
 cd build
 cmake ../Code.v05-00/
+module purge
+module load gcc/11
+module load cmake/latest
