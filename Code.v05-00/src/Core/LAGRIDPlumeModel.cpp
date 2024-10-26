@@ -66,9 +66,9 @@ SimStatus LAGRIDPlumeModel::runFullModel() {
 
         // Run Transport
         std::cout << "Running Transport" << std::endl;
-        //bool timeForTransport = (simVars_.TRANSPORT && (timestepVars_.nTime == 0 || timestepVars_.checkTimeForTransport()));
+        bool timeForTransport = (simVars_.TRANSPORT && (timestepVars_.nTime == 0 || timestepVars_.checkTimeForTransport()));
 
-        bool timeForTransport = 1;
+        //bool timeForTransport = 1;
 
         if (timeForTransport) {
             runTransport(timestepVars_.TRANSPORT_DT);
@@ -375,7 +375,7 @@ void LAGRIDPlumeModel::updateDiffVecs() {
     
     diffCoeffX_ = Vector_2D(yCoords_.size(), Vector_1D(xCoords_.size()));
     diffCoeffY_ = Vector_2D(yCoords_.size(), Vector_1D(xCoords_.size()));
-    
+
     #pragma omp parallel for
     for(std::size_t j = 0; j < yCoords_.size(); j++) {
         for(std::size_t i = 0; i < xCoords_.size(); i++) {
@@ -383,6 +383,8 @@ void LAGRIDPlumeModel::updateDiffVecs() {
             diffCoeffY_[j][i] = number[j][i] > num_max * 1e-4 ? dv_enhanced : input_.vertiDiff();
         }
     }
+
+    return;
 }
 void LAGRIDPlumeModel::runTransport(double timestep) {
     //Update the zero bc to reflect grid size changes
@@ -391,19 +393,18 @@ void LAGRIDPlumeModel::runTransport(double timestep) {
     //TODO: Implement height dependent shear. For now, just taking shear of y coordinate with highest xOD to avoid bugs.
     auto xOD = iceAerosol_.xOD(Vector_1D(xCoords_.size(), xCoords_[1] - xCoords_[0]));
     int maxIdx = 0;
-    std::cout << "\n i max: " << xOD.size();
     for (std::size_t i = 0; i < xOD.size(); i++) {
         if(xOD[i] > xOD[maxIdx]) maxIdx = i;
-        std::cout << "\n i: " << i;
     }
     shear_rep_ = met_.shear(maxIdx);
 
     const FVM_ANDS::AdvDiffParams fvmSolverInitParams(0, 0, shear_rep_, input_.horizDiff(), input_.vertiDiff(), timestepVars_.TRANSPORT_DT);
     const FVM_ANDS::BoundaryConditions ZERO_BC_INIT = FVM_ANDS::bcFrom2DVector(iceAerosol_.getPDF()[0], true);
+
     updateDiffVecs();
     //Transport the Ice Aerosol PDF
 
-    std::cout << "\n n max: " << iceAerosol_.getNBin();
+    std::cout << "n max:" << iceAerosol_.getNBin() << std::endl;
     #pragma omp parallel for default(shared)
     for ( UInt n = 0; n < iceAerosol_.getNBin(); n++ ) {
         /* Transport particle number and volume for each bin and
@@ -418,8 +419,10 @@ void LAGRIDPlumeModel::runTransport(double timestep) {
         //passing in "false" to the "parallelAdvection" param to not spawn more threads
         solver.operatorSplitSolve2DVec(iceAerosol_.getPDF_nonConstRef()[n], ZERO_BC, false);
 
-        std::cout << "n: " << n;
+        std::cout << "n: " << n << std::endl;
     }
+
+    std::cout << "done long" << std::endl;
 
     //Transport H2O
     {   
@@ -436,18 +439,14 @@ void LAGRIDPlumeModel::runTransport(double timestep) {
         H2O_Delta = Vector_2D(yCoords_.size(), Vector_1D(xCoords_.size()));
         auto H2O_Background = met_.H2O_field();
 
-        std::cout << "\n j max: " << yCoords_.size();
         for (std::size_t j=0; j<yCoords_.size(); j++){
-            std::cout << "\n j: " << j;
             for (std::size_t i=0; i<xCoords_.size(); i++){
                 H2O_Delta[j][i] = H2O_[j][i] - H2O_Background[j][i];
             }
         }
         // BC is zero, since we're calculating the difference relative to background.
-        std::cout << "\n j max: " << yCoords_.size();
         solver.operatorSplitSolve2DVec(H2O_Delta, ZERO_BC);
         for (std::size_t j=0; j<yCoords_.size(); j++){
-            std::cout << "\n j: " << j;
             for (std::size_t i=0; i<xCoords_.size(); i++){
                 H2O_[j][i] = H2O_Delta[j][i] + H2O_Background[j][i];
             }
